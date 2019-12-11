@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="nl" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="author" content="Jan van der Henst">
+    <link rel="stylesheet" href="style.css">
+    <title>To do list app</title>
+  </head>
+  <body>
+    <div class="container_login" id="login_screen" style="display: block;">
+      <div class="wit_deel login">
+        <h1>Inloggen</h1>
+        <input id="username" class="username" type="text" name="Gebruikersnaam" value="" placeholder="Gebruikersnaam" required>
+        <input id="password" class="password" type="password" name="wachtwoord" value="" placeholder='••••••••••' required>
+        <img id="closed_eye_icon" class="closed_eye_icon" src="img/closed_eye_icon.png" onclick="showPass()" alt="closed eye wachtwoord icon">
+        <img id="open_eye_icon" class="open_eye_icon" src="img/open_eye_icon.png" onclick="hidePass()" alt="opened eye wachtwoord icon">
+        <p class="vergeten" onclick="WachtwoordVergeten()"><strong>Wachtwoord vergeten?</strong></p>
+        <div class="button login_button" onclick="LoginFunctions()"><strong class="strong">Login</strong></div>
+      </div>
+      <div class="background"></div>
+    </div>
+    <div class="container_wachtwoord" id="wachtwoord_vergeten_screen" style="display:none;">
+      <div class="wit_deel wachtwoord_vergeten">
+        <h1>Wachtwoord <br> Vergeten</h1>
+        <p id="verstuurd">Email verstuurd</p>
+        <input id="email" class="email" type="text" name="Email" value="" placeholder="Email" required>
+        <p class="terug" onclick="TerugLogin()"><strong>Terug naar login</strong></p>
+        <div id="verstuur_button" class="button verstuur_button" onclick="VerstuurFunctions()"><strong class="strong">Verstuur</strong></div>
+      </div>
+      <div class="background"></div>
+    </div>
+    <div class="container_persoon" id="selecteer_screen">
+      <div class="wit_deel selecteer_persoon">
+        <p class="log-uit" onclick="LogUit()">Log-uit</p>
+        <h1>Selecteer Persoon</h1>
+        <div class="persoon_selectie first">
+          <h2>Joe the Hoe</h2>
+          <div class="selecteer_persoon_button">
+            <p>Selecteer</p>
+          </div>
+        </div>
+        <div class="persoon_selectie">
+          <h2>Joe the Hoe</h2>
+          <div class="selecteer_persoon_button">
+            <p>Selecteer</p>
+          </div>
+        </div>
+        <div class="persoon_selectie">
+          <h2>Joe the Hoe</h2>
+          <div class="selecteer_persoon_button">
+            <p>Selecteer</p>
+          </div>
+        </div>
+        <div class="persoon_selectie">
+          <h2>Joe the Hoe</h2>
+          <div class="selecteer_persoon_button">
+            <p>Selecteer</p>
+          </div>
+        </div>
+      </div>
+      <div class="background selecteer_persoon_background"></div>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>

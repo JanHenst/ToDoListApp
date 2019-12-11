@@ -1,0 +1,218 @@
+body {
+  font-family: arial;
+}
+
+h1, h2, h3, h4, h5, h6, p {margin: 0; padding: 0;}
+
+
+/* algemeen deel site */
+h1 {
+  font-size: 40px;
+  text-align: center;
+  margin-top: 70px;
+  padding-bottom: 60px;
+}
+p {
+  float: right;
+  margin-right: 3em;
+  margin-top: 9px;
+  color: #707070;
+  font-size: 15px;
+}
+input {
+  display: block;
+  width: 250px;
+  height: 30px;
+  color: #707070;
+  font-size: 17px;
+  font-weight: bold;
+  padding-left: 35px;
+  margin: 0 auto;
+  border: 1px solid #707070;
+  border-radius: 10px;
+  text-decoration: none;
+}
+input::placeholder {
+  color: #707070;
+}
+
+.placeholder::placeholder {
+  color: red;
+}
+
+.button {
+  background-color: white;
+  color: #707070;
+  width: 245px;
+  height: 33px;
+  cursor: pointer;
+  margin: 0 auto;
+  margin-top: 60px;
+  border: 1px solid black;
+  border-radius: 15px;
+  text-align: center;
+  font-size: 1.5em;
+  padding-top: .2em;
+}
+
+
+/* De login sectie */
+.container_login {
+  width: 375px;
+  height: 667px;
+  margin: 0 auto;
+  /* display: none; */
+}
+
+.wit_deel {
+  background-color: #F7F7F7;
+  width: 375px;
+  height: 450px;
+  position: absolute;
+  border: 1px solid black;
+  border-radius: 0px 0px 120px 120px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  z-index: 2;
+}
+
+.login input:nth-child(2n){margin-bottom: 2em;}
+
+input:focus {outline: none;}
+
+.username {
+  background-color: #FFFFFF;
+  background-image: url('img/persoon_icon.png');
+  background-position: 5px 5px;
+  background-repeat: no-repeat;
+  background-size: 22px 22px;
+}
+.password {
+  background-color: #FFFFFF;
+  background-image: url('img/wachtwoord_icon.png');
+  background-position: 5px 5px;
+  background-repeat: no-repeat;
+  background-size: 22px 22px;
+}
+.login_button:hover{
+  background-color: #e6e6e6;
+  color: #595959;
+}
+.closed_eye_icon {
+  width: 22px;
+  height: 22px;
+  float: right;
+  margin-top: -1.7em;
+  margin-right: 3.5em;
+}
+.open_eye_icon {
+  width: 22px;
+  height: 22px;
+  float: right;
+  margin-top: -1.7em;
+  margin-right: 3.5em;
+  display: none;
+}
+.vergeten {cursor: pointer;}
+
+/* de achtergrond */
+.background {
+  background-image: linear-gradient(#FDB289, #FDB289, #EE7666);
+  width: 375px;
+  height: 385px;
+  position: absolute;
+  margin-top: 282px;
+  border: 1px solid black;
+  z-index: 1;
+}
+
+ /* de wachtwoord vergeten sectie */
+.container_wachtwoord {
+  width: 375px;
+  height: 667px;
+  margin: 0 auto;
+}
+.email {
+  background-color: #FFFFFF;
+  background-image: url('img/email_icon.png');
+  background-position: 5px 5px;
+  background-repeat: no-repeat;
+  background-size: 22px 22px;
+}
+.terug{cursor: pointer;}
+#verstuurd {
+  color: #77B77E;
+  float: none;
+  text-align: center;
+  margin-left: 3em;
+  margin-top: -3.5em;
+  margin-bottom: 2.4em;
+  display: none;
+}
+
+/* de selecteer persoon secties */
+.container_persoon {
+  position: relative;
+  width: 375px;
+  height: 667px;
+  margin: 0 auto;
+  display: none;
+  overflow: hidden;
+}
+.selecteer_persoon {
+  height: 185px;
+  width: 373px;
+  border-radius: 0px 0px 100px 100px;
+}
+.selecteer_persoon_background {
+  height: 665px;
+  width: 373px;
+  margin-top: 0px;
+  background-image: linear-gradient(#FDB289, #FDB289, #FDB289, #EE7666);
+}
+.log-uit {
+  padding-top: 1px;
+  padding-left: 1em;
+  float: left;
+  height: 20px;
+  font-size: 18px;
+  cursor: pointer;
+  background-image: url("img/arrow_left_icon.png");
+  background-position: 0px 1px;
+  background-repeat: no-repeat;
+  background-size: 20px 20px;
+}
+.persoon_selectie {
+  background-color: #F7F7F7;
+  color: #707070;
+  height: 75px;
+  width: 250px;
+  margin: 0 auto;
+  margin-top: 3em;
+  text-align: center;
+  border: solid 1px #707070;
+  border-radius: 10px;
+  box-shadow: 0px 4px 8px 0px rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+.selecteer_persoon_button {
+  border: solid 1px #707070;
+  border-radius: 20px;
+  width: 150px;
+  height: 25px;
+  margin: 0 auto;
+  cursor: pointer;
+  box-shadow: 0px 1px 2px 0px rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+.selecteer_persoon_button:hover {
+  background-color: #e6e6e6;
+  color: #595959;
+}
+.persoon_selectie h2 {
+  padding-top: 5px;
+  padding-bottom: 5px;
+}
+.persoon_selectie p {
+  margin-top: 4px;
+}
+.first {
+  margin-top: 4em;
+}
