@@ -79,19 +79,17 @@ input::placeholder {
 
 input:focus {outline: none;}
 
-.username {
-  background-color: #FFFFFF;
-  background-image: url('img/persoon_icon.png');
-  background-position: 5px 5px;
-  background-repeat: no-repeat;
-  background-size: 22px 22px;
+.username_icon {
+  margin-left: 3.2em;
+  margin-top: -3.85em;
+  position: absolute;
+  width: 22px;
 }
-.password {
-  background-color: #FFFFFF;
-  background-image: url('img/wachtwoord_icon.png');
-  background-position: 5px 5px;
-  background-repeat: no-repeat;
-  background-size: 22px 22px;
+.password_icon {
+  margin-left: 3.2em;
+  margin-top: -3.85em;
+  position: absolute;
+  width: 22px;
 }
 .login_button:hover{
   background-color: #e6e6e6;
@@ -101,18 +99,18 @@ input:focus {outline: none;}
   width: 22px;
   height: 22px;
   float: right;
-  margin-top: -1.7em;
+  margin-top: -3.8em;
   margin-right: 3.5em;
 }
 .open_eye_icon {
   width: 22px;
   height: 22px;
   float: right;
-  margin-top: -1.7em;
+  margin-top: -3.8em;
   margin-right: 3.5em;
   display: none;
 }
-.vergeten {cursor: pointer;}
+.vergeten {cursor: pointer; margin-top: -2em;}
 
 /* de achtergrond */
 .background {
@@ -131,12 +129,11 @@ input:focus {outline: none;}
   height: 667px;
   margin: 0 auto;
 }
-.email {
-  background-color: #FFFFFF;
-  background-image: url('img/email_icon.png');
-  background-position: 5px 5px;
-  background-repeat: no-repeat;
-  background-size: 22px 22px;
+.email_icon {
+  margin-left: 3.2em;
+  margin-top: -1.8em;
+  position: absolute;
+  width: 22px;
 }
 .terug{cursor: pointer;}
 #verstuurd {
@@ -156,7 +153,8 @@ input:focus {outline: none;}
   height: 667px;
   margin: 0 auto;
   display: none;
-  overflow: hidden;
+  border-bottom: 1px solid black;
+  overflow: scroll;
 }
 .selecteer_persoon {
   height: 185px;
@@ -164,9 +162,10 @@ input:focus {outline: none;}
   border-radius: 0px 0px 100px 100px;
 }
 .selecteer_persoon_background {
-  height: 665px;
+  height: 700px;
   width: 373px;
   margin-top: 0px;
+  border-bottom: 0px;
   background-image: linear-gradient(#FDB289, #FDB289, #FDB289, #EE7666);
 }
 .log-uit {
