@@ -122,3 +122,217 @@ function LogUit() {
     y.style.display = "none";
   }
 }
+
+// de functie om naar de dagoverzicht te komen
+function selectPerson() {
+  window.location.href = "index2.html";
+}
+
+// de functie om terug naar de login te gaan vanaf het dagoverzicht en maandoverzicht
+function LogUitBig() {
+  window.location.href = "index.html";
+}
+
+// de funtie om van maandag naar dinsdag te gaan
+function volgendeDag() {
+  var x = document.getElementById("maandag");
+  var y = document.getElementById("dinsdag");
+
+  if (x.style.display == "") {
+    x.style.display = "none";
+    y.style.display = "";
+  } else {
+    x.style.display = "";
+    y.style.display = "none";
+  }
+}
+
+// de functie om van januari naar februari te gaan en de calendar img te veranderen
+function volgendeMaand() {
+  var x = document.getElementById("januari");
+  var y = document.getElementById("februari");
+  var j = document.getElementById("img_januari");
+  var f = document.getElementById("img_februari");
+
+  if (x.style.display == "") {
+    x.style.display = "none";
+    y.style.display = "";
+  } else {
+    x.style.display = "";
+    y.style.display = "none";
+  }
+
+  if (j.style.display == "") {
+    j.style.display = "none";
+    f.style.display = "";
+  } else {
+    j.style.display = "";
+    f.style.display = "none";
+  }
+}
+
+// de functie om van dagoverzicht naar maandoverzicht te gaan
+function dagMaand() {
+  var x = document.getElementById("dag_screen");
+  var y = document.getElementById("maand_screen");
+
+  if (x.style.display == "block") {
+    x.style.display = "none";
+    y.style.display = "block";
+  } else {
+    x.style.display = "block";
+    y.style.display = "none";
+  }
+}
+
+// de functie om van maandoverzicht naar dagoverzicht te gaan
+function maandDag() {
+  var x = document.getElementById("maand_screen");
+  var y = document.getElementById("dag_screen");
+
+  if (x.style.display == "block") {
+    x.style.display = "none";
+    y.style.display = "block";
+  } else {
+    x.style.display = "block";
+    y.style.display = "none";
+  }
+}
+
+// de functie om van dagoverzicht naar taakscherm 1 te gaan
+function naarTC1() {
+  var x = document.getElementById("dag_screen");
+  var y = document.getElementById("taak_screen_1");
+
+  if (x.style.display == "block") {
+    x.style.display = "none";
+    y.style.display = "block";
+  } else {
+    x.style.display = "block";
+    y.style.display = "none";
+  }
+}
+
+// de functie om van taakscherm 1 naar dagoverzicht te gaan
+function TerugOverzicht1() {
+  var x = document.getElementById("taak_screen_1");
+  var y = document.getElementById("dag_screen");
+
+  if (x.style.display == "block") {
+    x.style.display = "none";
+    y.style.display = "block";
+  } else {
+    x.style.display = "block";
+    y.style.display = "none";
+  }
+}
+// de functie om van taakscherm 2 naar dagoverzicht te gaan
+function TerugOverzicht2() {
+  var x = document.getElementById("taak_screen_2");
+  var y = document.getElementById("dag_screen");
+
+  if (x.style.display == "block") {
+    x.style.display = "none";
+    y.style.display = "block";
+  } else {
+    x.style.display = "block";
+    y.style.display = "none";
+  }
+}
+// de functie om van taakscherm 3 naar dagoverzicht te gaan
+function TerugOverzicht3() {
+  var x = document.getElementById("taak_screen_3");
+  var y = document.getElementById("dag_screen");
+
+  if (x.style.display == "block") {
+    x.style.display = "none";
+    y.style.display = "block";
+  } else {
+    x.style.display = "block";
+    y.style.display = "none";
+  }
+}
+
+// de functie om van taakscherm 1 naar taakscherm 2 te gaan
+function naarTC2() {
+  var x = document.getElementById("taak_screen_1");
+  var y = document.getElementById("taak_screen_2");
+
+  if (x.style.display == "block") {
+    x.style.display = "none";
+    y.style.display = "block";
+  } else {
+    x.style.display = "block";
+    y.style.display = "none";
+  }
+}
+
+// de functie om van taakscherm 2 naar taakscherm 3 te gaan
+function naarTC3() {
+  var x = document.getElementById("taak_screen_2");
+  var y = document.getElementById("taak_screen_3");
+
+  if (x.style.display == "block") {
+    x.style.display = "none";
+    y.style.display = "block";
+  } else {
+    x.style.display = "block";
+    y.style.display = "none";
+  }
+}
+
+// de functie om van taakscherm 3 naar taakscherm 2 te gaan
+function terugNaarTC2() {
+  var x = document.getElementById("taak_screen_3");
+  var y = document.getElementById("taak_screen_2");
+
+  if (x.style.display == "block") {
+    x.style.display = "none";
+    y.style.display = "block";
+  } else {
+    x.style.display = "block";
+    y.style.display = "none";
+  }
+}
+
+// de functie om van taakscherm 2 naar taakscherm 1 te gaan
+function terugNaarTC1() {
+  var x = document.getElementById("taak_screen_2");
+  var y = document.getElementById("taak_screen_1");
+
+  if (x.style.display == "block") {
+    x.style.display = "none";
+    y.style.display = "block";
+  } else {
+    x.style.display = "block";
+    y.style.display = "none";
+  }
+}
+
+// de functie om van taakscherm 3 naar eindscherm te gaan
+function naarEindeTaak() {
+  var x = document.getElementById("taak_screen_3");
+  var y = document.getElementById("einde_screen");
+
+  if (x.style.display == "block") {
+    x.style.display = "none";
+    y.style.display = "block";
+  } else {
+    x.style.display = "block";
+    y.style.display = "none";
+  }
+}
+
+// de functie om van eindscherm naar dagoverzicht te gaan
+function naarBegin() {
+  var x = document.getElementById("einde_screen");
+  var y = document.getElementById("dag_screen");
+
+  if (x.style.display == "block") {
+    x.style.display = "none";
+    y.style.display = "block";
+  } else {
+    x.style.display = "block";
+    y.style.display = "none";
+  }
+}

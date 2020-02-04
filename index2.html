@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="nl" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="author" content="Jan van der Henst">
+    <link rel="stylesheet" href="style.css">
+    <title>To do list app</title>
+  </head>
+  <body>
+    <div class="container_dag" id="dag_screen" style="display: block;">
+      <div class="wit_deel dag">
+        <p class="log-uit" onclick="LogUitBig()">Log-uit</p>
+        <h1>Dagoverzicht</h1>
+        <div class="button week_button">
+          <img class="arrow_left_icon" onclick="volgendeDag()" src="img/arrow_left_icon.png" alt="left arrow icon">
+          <strong id="maandag" class="strong">Maandag 27/01</strong>
+          <strong id="dinsdag" class="strong" style="display: none;">Dinsdag 28/01</strong>
+          <img class="arrow_right_icon" onclick="volgendeDag()" src="img/arrow_right_icon.png" alt="right arrow icon">
+        </div>
+        <div class="time">
+          <strong>10:00</strong>
+        </div>
+        <div class="eerste_taken taken">
+          <img class="circle" src="img/green_circle.png" alt="circle met kleur">
+          <p>Kleed je aan</p>
+          <img class="taak arrow_right_icon" onclick="naarTC1()" src="img/arrow_right_icon.png" alt="right arrow icon">
+          <div class="strong_time"><strong>9:00</strong></div>
+        </div>
+        <div class="taken">
+          <img class="circle" src="img/orange_circle.png" alt="circle met kleur">
+          <p>Poets je tanden</p>
+          <img class="taak arrow_right_icon" onclick="naarTC1()" src="img/arrow_right_icon.png" alt="right arrow icon">
+          <div class="strong_time"><strong>10:00</strong></div>
+        </div>
+        <div class="taken">
+          <img class="circle" src="img/gray_circle.png" alt="circle met kleur">
+          <p>Eet</p>
+          <img class="taak arrow_right_icon" onclick="naarTC1()" src="img/arrow_right_icon.png" alt="right arrow icon">
+          <div class="strong_time"><strong>11:00</strong></div>
+        </div>
+        <div class="taken">
+          <img class="circle" src="img/gray_circle.png" alt="circle met kleur">
+          <p>Ruim op</p>
+          <img class="taak arrow_right_icon" onclick="naarTC1()" src="img/arrow_right_icon.png" alt="right arrow icon">
+          <div class="strong_time"><strong>12:00</strong></div>
+        </div>
+        <div class="taken">
+          <img class="circle" src="img/gray_circle.png" alt="circle met kleur">
+          <p>Ga naar boven</p>
+          <img class="taak arrow_right_icon" onclick="naarTC1()" src="img/arrow_right_icon.png" alt="right arrow icon">
+          <div class="strong_time"><strong>12:30</strong></div>
+        </div>
+        <div class="taken">
+          <img class="circle" src="img/gray_circle.png" alt="circle met kleur">
+          <p>Ga weer slapen</p>
+          <img class="taak arrow_right_icon" onclick="naarTC1()" src="img/arrow_right_icon.png" alt="right arrow icon">
+          <div class="strong_time"><strong>13:00</strong></div>
+        </div>
+      </div>
+      <div class="background dag_background"></div>
+      <div class="footer">
+        <img class="dag_button" src="img/dag_icon.png" alt="button om naar dagoverzicht te gaan">
+        <img class="maand_button" style="cursor: pointer;" onclick="dagMaand()" src="img/maand_icon.png" alt="button om naar maandoverzicht te gaan">
+        <div class="text_buttons">
+          <p class="maand_text">Maand</p>
+          <p class="dag_text">Dag</p>
+        </div>
+      </div>
+    </div>
+    <div class="container_maand" id="maand_screen" style="display: none;">
+      <div class="wit_deel maand">
+        <p class="log-uit" onclick="LogUitBig()">Log-uit</p>
+        <h1>Maandoverzicht</h1>
+        <div class="button week_button">
+          <img class="arrow_left_icon" onclick="volgendeMaand()" src="img/arrow_left_icon.png" alt="left arrow icon">
+          <strong id="januari" class="strong">Januari 2020</strong>
+          <strong id="februari" class="strong" style="display: none;">Februari 2020</strong>
+          <img class="arrow_right_icon" onclick="volgendeMaand()" src="img/arrow_right_icon.png" alt="right arrow icon">
+        </div>
+        <div class="maand">
+          <img id="img_januari" class="img_januari" src="img/Januari.png" alt="januari calendar image">
+          <img id="img_februari" class="img_februari"  style="display: none;" src="img/Februari.png" alt="februari calendar image">
+        </div>
+      </div>
+      <div class="background maand_background"></div>
+      <div class="footer">
+        <img class="dag_button" style="cursor: pointer;" onclick="maandDag()" src="img/dag_icon.png" alt="button om naar dagoverzicht te gaan">
+        <img class="maand_button" src="img/maand_icon.png" alt="button om naar maandoverzicht te gaan">
+        <div class="text_buttons">
+          <p class="maand_text">Maand</p>
+          <p class="dag_text">Dag</p>
+        </div>
+      </div>
+    </div>
+    <div class="container_taak" id="taak_screen_1" style="display: none;">
+      <div class="wit_deel taak_header">
+        <p class="overzicht_button" onclick="TerugOverzicht1()">Overzicht</p>
+        <div class="paniek_button">
+          <div class="paniek_text" style="margin-top: .3em;">Paniek!</div>
+        </div>
+        <div class="opdracht">
+          <img class="kraan_icon" src="img/kraan.png" alt="water op de tandenborstel icon">
+          <h2>Maak je tandenborstel nat</h2>
+          <p class="time_bar">00:06</p>
+          <div class="bar"></div>
+          <div class="bar bar_color"></div>
+        </div>
+      </div>
+      <div class="taak_background"></div>
+      <div class="footer footer_taak">
+        <div class="taak_buttons terug_button">
+          <div class="taak_buttons_text">Terug</div>
+        </div>
+        <div class="taak_buttons audio_button">
+          <div class="taak_buttons_text">Audio</div>
+        </div>
+        <div class="taak_buttons verder_button" onclick="naarTC2()">
+          <div class="taak_buttons_text">Verder</div>
+        </div>
+      </div>
+    </div>
+    <div class="container_taak" id="taak_screen_2" style="display: none;">
+      <div class="wit_deel taak_header">
+        <p class="overzicht_button" onclick="TerugOverzicht2()">Overzicht</p>
+        <div class="paniek_button">
+          <div class="paniek_text" style="margin-top: .3em;">Paniek!</div>
+        </div>
+        <div class="opdracht">
+          <img class="kraan_icon" src="img/tandpasta_OT_icon.png" alt="tandpasta op de tandenborstel icon">
+          <h2>Doe tandpasta op je borstel</h2>
+          <p class="time_bar">00:06</p>
+          <div class="bar"></div>
+          <div class="bar bar_color"></div>
+        </div>
+      </div>
+      <div class="taak_background"></div>
+      <div class="footer footer_taak">
+        <div class="taak_buttons terug_button" onclick="terugNaarTC1()">
+          <div class="taak_buttons_text">Terug</div>
+        </div>
+        <div class="taak_buttons audio_button">
+          <div class="taak_buttons_text">Audio</div>
+        </div>
+        <div class="taak_buttons verder_button" onclick="naarTC3()">
+          <div class="taak_buttons_text">Verder</div>
+        </div>
+      </div>
+    </div>
+    <div class="container_taak" id="taak_screen_3" style="display: none;">
+      <div class="wit_deel taak_header">
+        <p class="overzicht_button" onclick="TerugOverzicht3()">Overzicht</p>
+        <div class="paniek_button">
+          <div class="paniek_text" style="margin-top: .3em;">Paniek!</div>
+        </div>
+        <div class="opdracht">
+          <img class="brush_teeth_icon" src="img/brush_teeth_icon.png" alt="tandenpoetsen icon">
+          <h2>Maak je tandenborstel nat</h2>
+          <p class="time_bar">00:06</p>
+          <div class="bar"></div>
+          <div class="bar bar_color"></div>
+        </div>
+      </div>
+      <div class="taak_background"></div>
+      <div class="footer footer_taak">
+        <div class="taak_buttons terug_button" onclick="terugNaarTC2()">
+          <div class="taak_buttons_text">Terug</div>
+        </div>
+        <div class="taak_buttons audio_button">
+          <div class="taak_buttons_text">Audio</div>
+        </div>
+        <div class="taak_buttons verder_button" onclick="naarEindeTaak()">
+          <div class="taak_buttons_text">Verder</div>
+        </div>
+      </div>
+    </div>
+    <div class="container_taak" id="einde_screen" style="display: none;">
+      <div class="wit_deel taak_header">
+        <p class="overzicht_button" onclick="TerugOverzicht3()">Overzicht</p>
+        <div class="paniek_button">
+          <div class="paniek_text" style="margin-top: .3em;">Paniek!</div>
+        </div>
+        <div class="opdracht">
+          <img class="brush_teeth_icon" src="img/brush_teeth_icon.png" alt="tandenpoetsen icon">
+          <h2>Maak je tandenborstel nat</h2>
+          <p class="time_bar">00:06</p>
+          <div class="bar"></div>
+          <div class="bar bar_color"></div>
+        </div>
+      </div>
+      <div class="eindscherm_background" onclick="naarBegin()"></div>
+      <div class="footer footer_taak">
+        <div class="taak_buttons terug_button" onclick="terugNaarTC2()">
+          <div class="taak_buttons_text">Terug</div>
+        </div>
+        <div class="taak_buttons audio_button">
+          <div class="taak_buttons_text">Audio</div>
+        </div>
+        <div class="taak_buttons verder_button" onclick="naarEindeTaak()">
+          <div class="taak_buttons_text">Verder</div>
+        </div>
+      </div>
+      <div class="Goed_gedaan" onclick="naarBegin()">
+        <img class="thumbs_up_icon" src="img/goed_gedaan_icon.png" alt="thumbs up icon">
+        <h2>Goed gedaan!</h2>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
